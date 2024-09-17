@@ -8,15 +8,6 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   video: true,
   screenshotOnRunFailure: true,
-  reporter: 'mochawesome',
-  "reporterOptions": {
-    "reportDir": "cypress/report",
-    "reportFilename": "[name].html",
-    "overwrite": true,
-    "html": "true",
-    "json": "true",
-  },
-
   e2e: {
     specPattern: "**/*.spec.js",
     setupNodeEvents(on, config) {
@@ -25,7 +16,7 @@ module.exports = defineConfig({
         hideXhr: true
         snapshotOnly: true
       }
-    require('cypress-mochawesome-reporter/plugin')(on);
+    return config;
     },
   },
 });

@@ -8,15 +8,12 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test:frontend": "cypress run --spec 'cypress/e2e/pages/FrontEnd/*.spec.js'",
-    "test:backend": "cypress run --spec 'cypress/e2e/pages/Backend/*.spec.js'",
-    "test:report": "cypress run --reporter mochawesome"
+    "test:backend": "cypress run --spec 'cypress/e2e/pages/Backend/*.spec.js'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.6",
-    "cypress-mochawesome-reporter": "^3.8.2",
-    "mochawesome-merge": "^4.3.0"
+    "cypress": "^13.6.6"
   },
   "dependencies": {
     "@cypress/webpack-preprocessor": "^6.0.2",

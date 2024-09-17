@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Saucedemo_GitHubActions
 
 on:
   push:
@@ -9,84 +9,66 @@ on:
       - main
 
 jobs:
-  # Job para rodar os testes de FrontEnd
   frontend-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout do código
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # 2. Setup do Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      # 3. Instalar dependências
       - name: Install dependencies
         run: npm install
 
-      # 4. Criar os diretórios necessários para os relatórios, screenshots e vídeos
-      - name: Create report and media directories
+      - name: Create media directories
         run: |
-          mkdir -p cypress/report/.jsons
           mkdir -p cypress/screenshots
           mkdir -p cypress/videos
 
-      # 5. Rodar os testes do FrontEnd
       - name: Run FrontEnd Cypress tests
         run: npm run cypress:run --spec "cypress/e2e/pages/FrontEnd/*.spec.js"
 
-      # 6. Fazer upload de artefatos (relatórios, screenshots, vídeos)
       - name: Upload FrontEnd test artifacts
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: frontend-cypress-artifacts
           path: |
-            cypress/report
             cypress/screenshots
             cypress/videos
 
-  # Job para rodar os testes de BackEnd (API)
   backend-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout do código
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # 2. Setup do Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      # 3. Instalar dependências
       - name: Install dependencies
         run: npm install
 
-      # 4. Criar os diretórios necessários para os relatórios, screenshots e vídeos
-      - name: Create report and media directories
+      - name: Create media directories
         run: |
-          mkdir -p cypress/report/.jsons
           mkdir -p cypress/screenshots
           mkdir -p cypress/videos
 
-      # 5. Rodar os testes do BackEnd
       - name: Run BackEnd Cypress API tests
         run: npm run cypress:run --spec "cypress/e2e/pages/Backend/*.spec.js"
 
-      # 6. Fazer upload de artefatos (relatórios, screenshots, vídeos)
       - name: Upload BackEnd test artifacts
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: backend-cypress-artifacts
           path: |
-            cypress/report
             cypress/screenshots
             cypress/videos
