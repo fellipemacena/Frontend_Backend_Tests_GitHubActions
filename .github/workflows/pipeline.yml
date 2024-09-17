@@ -42,7 +42,7 @@ jobs:
       # 6. Fazer upload de artefatos (relatórios, screenshots, vídeos)
       - name: Upload FrontEnd test artifacts
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: frontend-cypress-artifacts
           path: |
@@ -83,7 +83,7 @@ jobs:
       # 6. Fazer upload de artefatos (relatórios, screenshots, vídeos)
       - name: Upload BackEnd test artifacts
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: backend-cypress-artifacts
           path: |
