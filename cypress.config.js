@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
-module.exports = defineConfig({
+module.exports = defineConfig(
+  {
   viewportHeight: 1080,
   viewportWidth: 2010,
   defaultCommandTimeout: 30000,
@@ -11,10 +12,9 @@ module.exports = defineConfig({
   reporter: 'mochawesome',
   "reporterOptions": {
     "reportDir": "cypress/report",
-    "reportFilename": "[name].html",
     "overwrite": true,
     "html": "true",
-    "json": "false",
+    "json": "true",
   },
 
   e2e: {
