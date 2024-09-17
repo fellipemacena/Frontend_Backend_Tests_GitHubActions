@@ -15,7 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.6",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome-merge": "^4.3.0"
   },
   "dependencies": {
     "@cypress/webpack-preprocessor": "^6.0.2",
