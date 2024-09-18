@@ -15,7 +15,7 @@ Figura 1 - Árvore da estrutura de testes com Cypress
 Instalação:
 Após realizar o git clone do projeto, realize os seguintes passos para rodar o teste com sucesso:
 1) Primeiro, você precisará clonar o repositório localmente. Execute o seguinte comando no terminal ou Git Bash:
-git clone https://github.com/fellipemacena/Saucedemo_GitHubActions.git
+git clone https://github.com/fellipemacena/Frontend_Backend_Tests_GitHubActions.git
 
 2) Abra o VS Code, no terminal digite:
 npm install
@@ -55,7 +55,7 @@ Figure 1 - Test structure tree with Cypress
 Installation:
 After git cloning the project, perform the following steps to successfully run the test:
 1) First, you will need to clone the repository locally. Run the following command in the terminal or Git Bash:
-git clone https://github.com/fellipemacena/Saucedemo_GitHubActions.git
+git clone https://github.com/fellipemacena/Frontend_Backend_Tests_GitHubActions.git
 
 2) Open VS Code, in the terminal type:
 npm install
