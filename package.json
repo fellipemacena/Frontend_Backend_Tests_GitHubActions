@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress open": "cypress open",
+    "cypress run": "cypress run",
     "test:frontend": "cypress run --spec 'cypress/e2e/pages/FrontEnd/*.spec.js'",
     "test:backend": "cypress run --spec 'cypress/e2e/pages/Backend/*.spec.js'"
   },
